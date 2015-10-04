@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf.urls import url
-from .models import User
+from .models import UserInfo
+from django import forms
 from .forms import RegisterForm
+from django.contrib.auth.models import User
 # Create your views here.
 
 def login(request):
@@ -32,6 +34,21 @@ def signup(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             print form.cleaned_data
+            if form.cleaned_data['passwd1'] != form.cleaned_data['passwd2']:
+                raise forms.ValidationError({'passwd1':['Password do not match']})
+
+            if User.objects.filter(email=form.cleaned_data['emailid']).count():
+                raise forms.ValidationError({'email':['Email already taken ']})
+
+            u = User.objects.create_user(form.cleaned_data['emailid'], form.cleaned_data['emailid'], form.cleaned_data['passwd1'] )
+
+            ui = UserInfo()
+            ui.user = u
+            ui.class_of = form.cleaned_data['gradyear']
+
+            ui.save()
+
+
         else:
             print "error"
             print form.errors
