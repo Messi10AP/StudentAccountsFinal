@@ -7,6 +7,7 @@ urlpatterns = [
     # ex: /polls/
     url(r'^$', views.login, name='login'),
     url(r'^/login/$', views.login, name='login'),
+    url(r'^/signup/$', views.signup, name='signup'),
     url(r'^/info/$', views.studentinfo, name='studentinfo'),
 ]
 #]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
