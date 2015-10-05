@@ -4,7 +4,6 @@
 	<div class="form">
     	<ul class="tab-group">
         	<li class="tab active"><a href="#login">Log In</a></li>
-        	<li class="tab"><a href="#signup">Sign Up</a></li>
 		</ul>
       
       	<div class="tab-content">
@@ -32,69 +31,5 @@
 			  
 				</form>
         	</div>
-
-			<div id="signup">   
-				<h1>Sign Up for Free Today!</h1>
-			  
-				<form action="/student/signup/" method="post">
-				{% csrf_token %}
-					<div class="top-row">
-						<div class="field-wrap">
-							{{ form.fname.errors }}
-							<label for="{{ form.fname.id_for_label }}">
-								First Name<span class="req">*</span>
-							</label>
-							{{ form.fname }}
-						</div>
-				
-						<div class="field-wrap">
-							{{ form.lname.errors }}
-							<label>
-								Last Name<span class="req">*</span>
-							</label>
-							{{ form.lname }}
-						</div>
-					</div>
-
-					<div class="field-wrap">
-						<label>
-							Email Address<span class="req">*</span>
-						</label>
-						{{ form.emailid }}
-					</div>
-			  
-					<div class="field-wrap">
-						<label>
-							Set a Password<span class="req">*</span>
-						</label>
-						{{ form.passwd1 }}
-					</div>
-
-					<div class="field-wrap">
-						<label>
-							Confirm Password<span class="req">*</span>
-						</label>
-						{{ form.passwd2 }}
-					</div>          
-
-					<div class="field-wrap">
-						<label>
-							Graduation Year<span class="req">*</span>
-						</label>
-						{{ form.gradyear }}
-					</div>
-
-					<div class="field-wrap">
-						<label>
-							Grade <span class="req">*</span>
-						</label>
-						{{ form.grade }}
-					</div>
-					<button type="submit" class="button button-block"/>Get Started</button>
-			  
-				</form>
-				<h3>* = Required</h3>
-			</div>
-		</div>
 	</div>
 {% endblock %}
