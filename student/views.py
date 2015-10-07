@@ -54,7 +54,7 @@ def signup(request):
             print form.errors
     else:
         form = RegisterForm()
-    return render(request, 'student/signup.html', {'form': form})
+    return render(request, 'student/register.html', {'form': form})
 
 def forgotpassword(request):
     if request.method == 'POST':
