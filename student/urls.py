@@ -5,7 +5,8 @@ from django.conf import settings
 from django.conf.urls.static import static  
 urlpatterns = [
     # ex: /polls/
-    url(r'^$', views.login, name='login'),
+    #url(r'^$', views.login, name='login'),
+    url(r'^/register/$', views.signup, name='signup'),
     url(r'^/login/$', views.login, name='login'),
     url(r'^/signup/$', views.signup, name='signup'),
     url(r'^/info/$', views.studentinfo, name='studentinfo'),
