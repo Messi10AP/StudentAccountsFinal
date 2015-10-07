@@ -8,21 +8,22 @@
       
       	<div class="tab-content:after active">
         	<div id="login">   
-				<form action="/student/login" method="post">
+				<form action="/student/login/" method="post">
+				{% csrf_token %}	
 						<h1>Welcome Back!</h1>
 			  
 						<div class="field-wrap">
-						<label>
+						<label for="{{ form.username.id_for_label }}">
 							Email Address<span class="req">*</span>
 						</label>
-						<input type="email"required autocomplete="off"/>
+						{{ form.username }}
 					</div>
 			  
 					<div class="field-wrap">
-						<label>
+						<label for="{{ form.password.id_for_label }}">
 							Password<span class="req">*</span>
 						</label>
-						<input type="password"required autocomplete="off"/>
+						{{ form.password }}
 					</div>
 			  
 					<p class="forgot"><a href="/student/resetpass">Forgot Password?</a></p>

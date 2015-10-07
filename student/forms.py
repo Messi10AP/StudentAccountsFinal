@@ -13,3 +13,6 @@ class RegisterForm(forms.Form):
     gradyear = forms.IntegerField()
     grade = forms.IntegerField()
 
+class LoginForm(forms.Form):
+    username = forms.EmailField()
+    password = forms.CharField(widget=forms.PasswordInput)

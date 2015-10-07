@@ -1,17 +1,29 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf.urls import url
+from django.contrib.auth import authenticate, login
 from .models import UserInfo
 from django import forms
-from .forms import RegisterForm
+from .forms import RegisterForm, LoginForm
 from django.contrib.auth.models import User
 # Create your views here.
 
-def login(request):
+def signin(request):
     print "login"
-    form = RegisterForm()
+    form = LoginForm()
     if request.method == 'POST':
-        
+        username = request.POST['username']
+        password = request.POST['password']
+	print "input username ", username
+        user = authenticate(username=username, password=password)
+	if user is not None:
+		print "user not none"
+		login(request, user)
+		print user.username
+                print user.email
+		return render(request, 'student/info.html')
+        else:
+		print "login failed"
         print "post login"
          #if form.is_valid():
             # process the data in form.cleaned_data as required
