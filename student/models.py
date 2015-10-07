@@ -7,6 +7,6 @@ class UserInfo(models.Model):
     pub_date = models.DateTimeField( auto_now=True )
     grade = models.IntegerField()
     def __str__(self):
-	return self.user
+	return self.user.username
 
 # Create your models here.
