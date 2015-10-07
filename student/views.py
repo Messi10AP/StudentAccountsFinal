@@ -8,6 +8,9 @@ from .forms import RegisterForm, LoginForm
 from django.contrib.auth.models import User
 # Create your views here.
 
+def home(request):
+    return render(request, 'student/homepage.html')
+
 def signin(request):
     print "login"
     form = LoginForm()
