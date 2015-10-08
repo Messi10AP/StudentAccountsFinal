@@ -12,16 +12,16 @@
 				{% csrf_token %}	
 						<h1>Welcome Back!</h1>
 			  
-						<div class="field-wrap" val="">
+						<div class="field-wrap">
 						<label for="{{ form.username.id_for_label }}">
-							Email Address<span class="req">*</span>
+							Email Address<span class="req" val="">*</span>
 						</label>
 						{{ form.username }}
 					</div>
 			  
-					<div class="field-wrap" val="">
+					<div class="field-wrap">
 						<label for="{{ form.password.id_for_label }}">
-							Password<span class="req">*</span>
+							Password<span class="req" val="">*</span>
 						</label>
 						{{ form.password }}
 					</div>
