@@ -14,9 +14,9 @@ body { }
 
 #colour1 {
     padding: 5px;
-    color: #d3d;   /*24313C*/
+    color: #59323C;   /*24313C*/
     font-size: 20px;
-    background-color: #24313C;
+    background-color: #F2EEB3;
     -webkit-appearance: none;
 }
 a {
@@ -30,12 +30,12 @@ a:hover {
 }
 
 .form {
-  background: rgba(19, 35, 47, 0.9);
+  background: rgba(35, 1, 56, 0.9);
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
   border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  box-shadow: 0 4px 10px 4px rgba(35, 1, 56, 0.4);
 }
 
 .tab-group {
@@ -67,7 +67,7 @@ a:hover {
   color: #ffffff;
 }
 .tab-group .active a {
-  background: #1ab188;
+  background: #696046;
   color: #ffffff;
 }
 
