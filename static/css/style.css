@@ -8,15 +8,15 @@ html {
 
 body {
   background: #c1bdba;
-  font-family: 'Titillium-Web', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 body { }
 
 #colour1 {
     padding: 5px;
-    color: #59323C;   /*24313C*/
+    color: #24313C;
     font-size: 20px;
-    background-color: #F2EEB3;
+    background-color: #24313C;
     -webkit-appearance: none;
 }
 a {
@@ -30,12 +30,12 @@ a:hover {
 }
 
 .form {
-  background: rgba(35, 1, 56, 0.9);
+  background: rgba(19, 35, 47, 0.9);
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
   border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(35, 1, 56, 0.4);
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
 .tab-group {
@@ -67,7 +67,7 @@ a:hover {
   color: #ffffff;
 }
 .tab-group .active a {
-  background: #696046;
+  background: #1ab188;
   color: #ffffff;
 }
 
@@ -88,7 +88,6 @@ label {
       -ms-transform: translateY(6px);
           transform: translateY(6px);
   left: 13px;
-  top: 0px;
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.25s ease;
           transition: all 0.25s ease;
