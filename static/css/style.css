@@ -88,7 +88,7 @@ label {
       -ms-transform: translateY(6px);
           transform: translateY(6px);
   left: 13px;
-  top: -2px;
+  top: 0px;
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.25s ease;
           transition: all 0.25s ease;
