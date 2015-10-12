@@ -27,6 +27,7 @@ def signin(request):
 		return render(request, 'student/info.html')
         else:
 		print "login failed"
+		return HttpResponseRedirect('student/error/')
         print "post login"
          #if form.is_valid():
             # process the data in form.cleaned_data as required
