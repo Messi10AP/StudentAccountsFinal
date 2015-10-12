@@ -17,26 +17,25 @@ def signin(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
-	print "input username ", username
+        print "input username ", username
         user = authenticate(username=username, password=password)
-	if user is not None:
-		print "user not none"
-		login(request, user)
-		print user.username
-                print user.email
-		return render(request, 'student/info.html')
+        if user is not None:
+            print "user not none"
+            login(request, user)
+            print user.username
+            print user.email
+            return render(request, 'student/info.html')
         else:
-		print "login failed"
-        print "post login"
-         #if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # if password valid redirect to student info page
-            # redirect to a new URL:
-            
- 	    #print form.cleaned_data
-            #return HttpResponseRedirect('student/info/')
+            print "login failed"
+            print "post login"
+             #if form.is_valid():
+                # process the data in form.cleaned_data as required
+                # if password valid redirect to student info page
+                # redirect to a new URL:
+                
+             #print form.cleaned_data
+                #return HttpResponseRedirect('student/info/')
     else:
-
         print "hello"
          #form = LoginForm()
     #return render(request, 'student/index.html', {'form': form})
@@ -47,43 +46,47 @@ def signup(request):
     if request.method == 'POST':
         print "post signup"
         form = RegisterForm(request.POST)
-        if form.is_valid():
-            print form.cleaned_data
-            if form.cleaned_data['passwd1'] != form.cleaned_data['passwd2']:
-                raise forms.ValidationError({'passwd1':['Password do not match']})
+        try:
+            if form.is_valid():
+                print form.cleaned_data
+                u = User.objects.create_user(form.cleaned_data['emailid'], form.cleaned_data['emailid'], form.cleaned_data['passwd1'] )
 
-            if User.objects.filter(email=form.cleaned_data['emailid']).count():
-                raise forms.ValidationError({'email':['Email already taken ']})
+                ui = UserInfo()
+                ui.user = u
+                ui.class_of = form.cleaned_data['gradyear']
+                ui.grade = form.cleaned_data['grade']
 
-            u = User.objects.create_user(form.cleaned_data['emailid'], form.cleaned_data['emailid'], form.cleaned_data['passwd1'] )
-
-            ui = UserInfo()
-            ui.user = u
-            ui.class_of = form.cleaned_data['gradyear']
-
-            ui.save()
+                ui.save()
 
 
-        else:
-            print "error"
+            else:
+                print "error"
+                print form.errors
+        except:
+            raise
+            print "error here"
             print form.errors
+            pass
+            #return render(request, 'student/register.html', {'form': form})
+            
     else:
         form = RegisterForm()
+
     return render(request, 'student/register.html', {'form': form})
 
 def forgotpassword(request):
     if request.method == 'POST':
-         form = LoginForm(request.POST)
-         if form.is_valid():
+        form = LoginForm(request.POST)
+        if form.is_valid():
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
         
- 	   	print form.cleaned_data
-           	return HttpResponseRedirect('/thanks/')
-	 else:
-		print "INVALID"
-		print form.errors
+            print form.cleaned_data
+            return HttpResponseRedirect('/thanks/')
+        else:
+            print "INVALID"
+            print form.errors
     else:
          form = LoginForm()
     return render(request, 'student/forgotpassword.html')
@@ -91,4 +94,4 @@ def forgotpassword(request):
 
 def studentinfo(request):
     return render(request, 'student/studentinfo.html', {} )
-	
+    
