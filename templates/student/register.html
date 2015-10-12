@@ -20,10 +20,11 @@
 
     	<ul class="tab-group">
     		<li class="tab active"><a href="#signup">Register</a></li>
-        	<li class="tab"><a href="#login">Log In</a></li>
 		</ul>
+		<div class="tab-content">
 			<div id="signup">   
 				<h1>Sign Up for Free Today!</h1>
+				<h2><a href="/student/login">Already have an account?</a><h3>
 				<form action="/student/signup/" method="post">
 				{% csrf_token %}
 					<div class="top-row">
@@ -86,7 +87,7 @@
 				<h3>* = Required</h3>
 			</div>
 			<div id="login">
-				<h1>WHAT THE FUCK</h1>
+				<h1><a href="/student/login/">Login Now!</a></h1>
 			</div>
 		</div>
 {% endblock %}

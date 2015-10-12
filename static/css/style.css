@@ -40,8 +40,10 @@ a:hover {
 
 .tab-group {
   list-style: none;
-  padding: 0;
+  padding: 40;
   margin: 0 0 40px 0;
+  position: relative;
+  left: 100px;
 }
 .tab-group:after {
   content: "";
@@ -79,6 +81,13 @@ h1 {
   text-align: center;
   color: #ffffff;
   font-weight: 300;
+  margin: 0 0 40px;
+}
+
+h2 {
+  text-align: center;
+  color: #97C944;
+  font-weight: 200;
   margin: 0 0 40px;
 }
 

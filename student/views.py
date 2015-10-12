@@ -26,8 +26,6 @@ def signin(request):
             print user.email
             return render(request, 'student/info.html')
         else:
-            print "login failed"
-            print "post login"
              #if form.is_valid():
                 # process the data in form.cleaned_data as required
                 # if password valid redirect to student info page
@@ -35,6 +33,15 @@ def signin(request):
                 
              #print form.cleaned_data
                 #return HttpResponseRedirect('student/info/')
+		print "login failed"
+		return HttpResponseRedirect('student/error/')
+         #if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # if password valid redirect to student info page
+            # redirect to a new URL:
+            
+ 	    #print form.cleaned_data
+            #return HttpResponseRedirect('student/info/')
     else:
         print "hello"
          #form = LoginForm()
