@@ -43,6 +43,7 @@ a:hover {
   padding: 0;
   margin: 0 0 40px 0;
   position: relative;
+  left: -40px;
 }
 .tab-group:after {
   content: "";
