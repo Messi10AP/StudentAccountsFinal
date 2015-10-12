@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.conf.urls import url
 from django.contrib.auth import authenticate, login
 from .models import UserInfo
@@ -34,7 +34,7 @@ def signin(request):
              #print form.cleaned_data
                 #return HttpResponseRedirect('student/info/')
 		print "login failed"
-		return HttpResponseRedirect('student/error/')
+		return HttpResponseRedirect('/student/error/')
          #if form.is_valid():
             # process the data in form.cleaned_data as required
             # if password valid redirect to student info page
@@ -103,4 +103,4 @@ def studentinfo(request):
     return render(request, 'student/studentinfo.html', {} )
     
 def error(request):
-    return render(request, 'student/error.html', {} )
+    return render(request, 'student/LoginError.html', {} )
