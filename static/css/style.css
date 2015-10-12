@@ -16,7 +16,7 @@ body { }
     padding: 5px;
     color: #d3d;   /*24313C*/
     font-size: 20px;
-    background-color: #d3d;
+    background-color: #24313C;
     -webkit-appearance: none;
 }
 a {
@@ -79,7 +79,7 @@ a:hover {
 
 h1 {
   text-align: center;
-  color: #ffffff;
+  color: #d3d;
   font-weight: 300;
   margin: 0 0 40px;
 }
