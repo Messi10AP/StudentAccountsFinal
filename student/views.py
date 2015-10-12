@@ -102,3 +102,5 @@ def forgotpassword(request):
 def studentinfo(request):
     return render(request, 'student/studentinfo.html', {} )
     
+def error(request):
+    return render(request, 'student/error.html', {} )
