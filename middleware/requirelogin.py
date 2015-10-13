@@ -13,6 +13,12 @@ class RequireLoginMiddleware(object):
         self.require_login_path = '/student/login/'
                                                                                                                  
     def process_request(self, request):
+        print "request path"
+        print request.path
+
+        if request.path == "/student/register/" or request.path == "/student/register":
+            return None
+
         if request.path != self.require_login_path and request.user.is_anonymous(): 
             if request.POST:
                 return login(request)
