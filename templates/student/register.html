@@ -2,26 +2,10 @@
 
 {% block content %}
 	<div class="form">
-
-		{% if form.errors %}
-			{% for field in form %}
-				{% for error in field.errors %}
-					<div class="alert alert-error">
-						<strong>{{ error|escape }}</strong>
-					</div>
-				{% endfor %}
-			{% endfor %}
-			{% for error in form.non_field_errors %}
-				<div class="alert alert-error">
-					<strong>{{ error|escape }}</strong>
-				</div>
-			{% endfor %}
-		{% endif %}
-
     	<ul class="tab-group">
     		<li class="tab active"><a href="#signup">Register</a></li>
 		</ul>
-		<div class="tab-content">
+      	<div class="tab-content:after active">
 			<div id="signup">   
 				<h1>Sign Up for Free Today!</h1>
 				<h2><a href="/student/login">Already have an account?</a><h3>
@@ -46,6 +30,7 @@
 					</div>
 
 					<div class="field-wrap">
+						{{ form.emailid.errors }}
 						<label>
 							Email Address<span class="req">*</span>
 						</label>
@@ -53,6 +38,7 @@
 					</div>
 			  
 					<div class="field-wrap">
+						{{ form.passwd1.errors }}
 						<label>
 							Set a Password<span class="req">*</span>
 						</label>
@@ -60,6 +46,7 @@
 					</div>
 
 					<div class="field-wrap">
+						{{ form.passwd2.errors }}
 						<label>
 							Confirm Password<span class="req">*</span>
 						</label>
@@ -86,8 +73,6 @@
 				</form>
 				<h3>* = Required</h3>
 			</div>
-			<div id="login">
-				<h1><a href="/student/login/">Login Now!</a></h1>
-			</div>
 		</div>
+	</div>
 {% endblock %}
