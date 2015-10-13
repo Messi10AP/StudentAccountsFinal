@@ -45,6 +45,7 @@ def signin(request):
 
     return render(request, 'student/login.html', {'form': form})
 
+@csrf_exempt
 def signup(request):
     print "signup"
     if request.method == 'POST':
@@ -62,7 +63,9 @@ def signup(request):
                 ui.balance = 0
 
                 ui.save()
+                user = authenticate(username=form.cleaned_data['emailid'], password=form.cleaned_data['passwd1'])
                 login(request,user)
+                print "after login in signup"
                 return redirect("/")
 
 

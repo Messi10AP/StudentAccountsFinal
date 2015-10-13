@@ -16,7 +16,7 @@ class RequireLoginMiddleware(object):
         print "request path"
         print request.path
 
-        if request.path == "/student/register/" or request.path == "/student/register":
+        if request.path == "/student/signup/" or request.path == "/student/signup" or request.path == '/admin/login' or request.path == '/admin/login/' or request.path == '/admin/':
             return None
 
         if request.path != self.require_login_path and request.user.is_anonymous(): 
