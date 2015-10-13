@@ -153,6 +153,12 @@ textarea {
   margin-bottom: 40px;
 }
 
+
+.field-wrap.override label {
+  position: relative;
+  margin-bottom: 40px;
+}
+
 .top-row:after {
   content: "";
   display: table;
