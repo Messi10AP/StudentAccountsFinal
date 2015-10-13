@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.conf.urls import url
 from .models import UserInfo
 from django import forms
@@ -100,3 +100,5 @@ def forgotpassword(request):
 def studentinfo(request):
     return render(request, 'student/studentinfo.html', {} )
     
+def error(request):
+    return render(request, 'student/LoginError.html', {} )
