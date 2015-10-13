@@ -62,6 +62,8 @@ def signup(request):
                 ui.balance = 0
 
                 ui.save()
+                login(request,user)
+                return redirect("/")
 
 
             else:
