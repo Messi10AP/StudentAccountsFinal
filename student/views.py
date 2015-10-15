@@ -7,7 +7,7 @@ from .forms import RegisterForm, LoginForm
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 # Create your views here.
 
 def home(request):
@@ -107,3 +107,8 @@ def studentinfo(request):
     
 def error(request):
     return render(request, 'student/LoginError.html', {} )
+
+def site_logout(request):
+    logout(request)
+    return redirect("/")
+    #return render(request, 'student/studentinfo.html', {} )
