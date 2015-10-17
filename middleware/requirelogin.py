@@ -16,6 +16,8 @@ class RequireLoginMiddleware(object):
         print "request path"
         print request.path
 
+        ## if you need to force login before getting to home page, comment out return None
+        return None
         if request.path == "/student/signup/" or request.path == "/student/signup" or request.path == '/admin/login' or request.path == '/admin/login/' or request.path == '/admin/':
             return None
 

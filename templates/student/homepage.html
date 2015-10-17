@@ -56,7 +56,11 @@
                         <a href="#contact">Contact Us</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="student/logout">Logout</a>
+          				{% if user.is_authenticated %}                                        
+						<a href="student/logout"> {{ user.username }} Logout</a>
+					     {% else %}
+                        	<a href="student/login"> Guest Login</a>
+						 {% endif %}
                     </li>
                 </ul>
             </div>
