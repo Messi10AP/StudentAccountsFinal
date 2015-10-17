@@ -37,8 +37,12 @@ class LoginForm(forms.Form):
 
     def clean(self):
         cleaned_data = super(LoginForm, self).clean()
-        username = cleaned_data['username']
-        password = cleaned_data['password']
+        try:
+            username = cleaned_data['username']
+            password = cleaned_data['password']
+        except:
+            raise forms.ValidationError({'username':['username/password required']})
+
         user = authenticate(username=username, password=password)
         if user is not None:
             print "user not none"
