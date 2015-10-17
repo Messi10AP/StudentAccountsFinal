@@ -11,7 +11,7 @@ from django.contrib.auth import authenticate, login, logout
 # Create your views here.
 
 def home(request):
-    return render(request, 'student/homepage.html')
+    return render(request, 'student/index.html')
 
 @csrf_exempt
 def signin(request):
