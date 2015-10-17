@@ -16,6 +16,11 @@
           <li><a href="#testimonial">User Reviews</a></li>
           <li><a href="#aboutus">About Us</a></li>
           <li><a href="#clients">Contact</a></li>
+          <li>
+            {% if user.is_authenticated %}                                        
+            <a href="student/logout"> {{ user.username }} Logout</a>
+             {% endif %}
+          </li>
         </ul>
         <button class="close-button" id="close-button">Close Menu</button>
     </div>
