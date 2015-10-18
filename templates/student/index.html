@@ -47,14 +47,14 @@
                 <div class="nav-wrapper">
                   <form onsubmit="return false;">
                     <div class="input-field">
-                      <input id="search" type="search" required>
+                      <input id="search" type="search" required placeholder="Search">
                       <label for="search"><i class="material-icons">search</i></label>
                       <i class="material-icons">close</i>
+                    </div>
+                  </form>
                   <button class="menu-icon"  id="open-button">
                     <i class="mdi-navigation-menu"></i>
-                  </button>
-                    </div>
-                  </form> 
+                  </button> 
                 </div>
               </nav>
               </div>
@@ -748,6 +748,12 @@
 
 </script>		
 
+    <script>
+        $(document).ready(function() {
+            // This command is used to initialize some elements and make them work properly
+            $.material.init();
+        });
+    </script>
   </body>
 
 
