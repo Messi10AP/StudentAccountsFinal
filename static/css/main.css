@@ -243,17 +243,17 @@ a:focus {
     font-size: 50px !important;
   }
 }
-#features {
+#pages {
   background: #fff;
 }
-#features .features {
+#pages .features {
   margin: 30px 0;
 }
-#features .features .icon {
+#pages .features .icon {
   float: left;
   text-align: center;
 }
-#features .features .icon i {
+#pages .features .icon i {
   width: 80px;
   height: 80px;
   line-height: 80px;
@@ -261,44 +261,44 @@ a:focus {
   font-size: 36px;
   color: #3f51b5;
 }
-#features .features h4 {
+#pages .features h4 {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
   color: #3f51b5;
 }
-#features .features .features-text {
+#pages .features .features-text {
   padding-left: 80px;
 }
-#features .features .features-text p {
+#pages .features .features-text p {
   margin: 0;
 }
-#why {
+#features {
   background: url(../img/why-bg.jpg);
   background-size: cover;
   color: #fff;
 }
-#why .content h2 {
+#features .content h2 {
   font-size: 50px;
   line-height: 70px;
   margin-top: 0;
   font-weight: 100;
 }
-#why .content .list-item li {
+#features .content .list-item li {
   color: #fff;
   line-height: 50px;
   font-size: 18px;
   text-transform: uppercase;
 }
-#why .content .list-item li i {
+#features .content .list-item li i {
   font-size: 32px;
   padding-right: 5px;
   vertical-align: middle;
 }
-#why img {
+#features img {
   float: right;
 }
-#why .feature-item {
+#features .feature-item {
   padding: 48px 0;
 }
 #cta {
