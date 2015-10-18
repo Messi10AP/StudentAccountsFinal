@@ -17,6 +17,15 @@
           <li><a href="#aboutus">About Us</a></li>
           <li><a href="#clients">Contact</a></li>
           <li>
+            <form onsubmit="return false;">
+                    <div class="input-field">
+                      <input id="search" type="search" required placeholder="Search">
+                      <label for="search"><i class="material-icons">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
+            </form>
+          </li>
+          <li>
             {% if user.is_authenticated %}                                        
             <a href="student/logout"> {{ user.username }} Logout</a>
              {% endif %}
@@ -40,23 +49,16 @@
       
       <div class="container">
           <div class="col-md-12">
-
             <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
               <div class="container">
-              <nav>
-                <div class="nav-wrapper">
-                  <form onsubmit="return false;">
-                    <div class="input-field">
-                      <input id="search" type="search" required placeholder="Search">
-                      <label for="search"><i class="material-icons">search</i></label>
-                      <i class="material-icons">close</i>
-                    </div>
-                  </form>
+                <div class="navbar-header">
+                  <a class="logo-left " href="index.html"><i class="mdi-image-timelapse"></i>Pluto</a>
+                </div>
+                <div class="navbar-right">
                   <button class="menu-icon"  id="open-button">
                     <i class="mdi-navigation-menu"></i>
-                  </button> 
+                  </button>             
                 </div>
-              </nav>
               </div>
             </div>
         </div> 
