@@ -42,16 +42,17 @@
 
             <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
               <div class="container">
-                <div class="navbar-header">
-                  <a class="logo-left " href="index.html"><i class="mdi-image-timelapse"></i>Pluto</a>
-                </div>
-                <div class="navbar-right">
-                  <button class="menu-icon"  id="open-button">
-                    <i class="mdi-navigation-menu"></i>
-                  </button>             
-                </div>
-              </div>
-            </div>
+                <nav>
+                  <div class="nav-wrapper">
+                    <form>
+                      <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                      </div>
+                    </form>
+                  </div>
+                </nav>
         </div>        
         <div class="contents text-right">
           <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Student Accounts</h1>
@@ -644,8 +645,11 @@
               <input type="text" class="form-control" name="name" placeholder="Name">
             
               <i class="mdi-content-mail"></i>
-              <input type="email" class="form-control" name="EMAIL" placeholder="Email">                  
-                                    
+              <input type="email" class="form-control" name="EMAIL" placeholder="Email">
+              <p>Drop a Rating!</p>                  
+              <p class="range-field">
+                <input type="range" id="test5" min="0" max="100" />
+              </p>            
               <textarea class="form-control" placeholder="Message" rows="4"></textarea>              
               <button type="submit" id="submit" class="btn btn-lg btn-primary">Send Message</button>
               <div id="success" style="color:#3F51B5;">
