@@ -3,7 +3,7 @@
 {% block content %}
 
   <body>
-
+<div id="all">
     <div class="navbar navbar-invers menu-wrap">
       <div class="navbar-header text-center">
         <a class="navbar-brand logo-right" href="javascript:void(0)"><i class="mdi-image-timelapse"></i>Our Name</a>
@@ -732,13 +732,13 @@
       </div>
     </section>     
     </div>  
-
+</div>
     <script type="text/javascript">
 
   var myHilitor2;
 
   document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("why");
+    myHilitor2 = new Hilitor("all");
     myHilitor2.setMatchType("left");
   }, false);
 
@@ -746,90 +746,7 @@
     myHilitor2.apply(this.value);
   }, false);
 
-</script>
-
-<script type="text/javascript">
-
-  var myHilitor2;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("features");
-    myHilitor2.setMatchType("left");
-  }, false);
-
-  document.getElementById("search").addEventListener("keyup", function() {
-    myHilitor2.apply(this.value);
-  }, false);
-
-</script>
-
-<script type="text/javascript">
-
-  var myHilitor2;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("screenshot");
-    myHilitor2.setMatchType("left");
-  }, false);
-
-  document.getElementById("search").addEventListener("keyup", function() {
-    myHilitor2.apply(this.value);
-  }, false);
-
-</script>
-
-<script type="text/javascript">
-
-  var myHilitor2;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("testimonial");
-    myHilitor2.setMatchType("left");
-  }, false);
-
-  document.getElementById("search").addEventListener("keyup", function() {
-    myHilitor2.apply(this.value);
-  }, false);
-
-</script>
-
-<script type="text/javascript">
-
-  var myHilitor2;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("clients");
-    myHilitor2.setMatchType("left");
-  }, false);
-
-  document.getElementById("search").addEventListener("keyup", function() {
-    myHilitor2.apply(this.value);
-  }, false);
-
-</script>
-
-<script type="text/javascript">
-
-  var myHilitor2;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    myHilitor2 = new Hilitor("aboutus");
-    myHilitor2.setMatchType("left");
-  }, false);
-
-  document.getElementById("search").addEventListener("keyup", function() {
-    myHilitor2.apply(this.value);
-  }, false);
-
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // This command is used to initialize some elements and make them work properly
-            $.material.init();
-        });
-    </script>
-		
+</script>		
 
   </body>
 
