@@ -203,6 +203,20 @@
         </div>
       </div>
     </section>
+<script type="text/javascript">
+
+  var myHilitor2;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    myHilitor2 = new Hilitor("why");
+    myHilitor2.setMatchType("left");
+  }, false);
+
+  document.getElementById("keywords").addEventListener("keyup", function() {
+    myHilitor2.apply(this.value);
+  }, false);
+
+</script>
 
      <section id="main-features" class="section main-feature-gray">
       <div class="container">
