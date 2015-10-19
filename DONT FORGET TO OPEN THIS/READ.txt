@@ -1,0 +1,14 @@
+turn bigwords.txt
+
+into syntax
+
+'word', 'newword', 
+
+scan thgrough line by line
+
+store words into array
+
+add ' to beginning and to end
+
+put everything together and output to txt doc
+	remember to loop array[i] + ,
