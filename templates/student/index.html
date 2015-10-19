@@ -675,9 +675,8 @@
                     <input type="range" id="rate" min="0" max="100" />
                   </p>                      
               <textarea class="form-control" placeholder="Message" rows="4"></textarea>              
-              <button type="submit" id="submit" class="btn btn-lg btn-primary">Send Message</button>
-              <div id="success" style="color:#3F51B5;">
-              </div>
+              <button type="submit" id="submit" class="btn btn-lg btn-primary" onclick="Materialize.toast('Your Message was Successfully Sent!', 4000, 'rounded')">Send Message</button>
+              <a class="btn" id="fun" onclick="randomwords();">Rock Paper Scisors!</a>
             </form>
           </div>
         </div>
@@ -752,6 +751,14 @@
 
 </script>		
 
+<script>
+function randomwords()
+{
+var things = ['Rock', 'Paper', 'Scissor'];
+var thing = things[Math.floor(Math.random()*things.length)];
+Materialize.toast('I am a toast!', 4000)
+}
+</script>
   </body>
 
 
