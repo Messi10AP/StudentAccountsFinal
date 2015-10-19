@@ -64,6 +64,11 @@ jQuery(function($) {
 		} );
 	}
 
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+       toggleMenu();
+    }
+});
 	function toggleMenu() {
 		if( isOpen ) {
 			classie.remove( bodyEl, 'show-menu' );
