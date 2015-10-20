@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserInfo
+from .models import UserInfo, Events
 # Register your models here.
 class UserAdmin(admin.ModelAdmin):
     fields = ['user', 'grade', 'class_of', 'balance',  'pub_date']
@@ -17,5 +17,9 @@ class UserAdmin(admin.ModelAdmin):
     def user_email(self,obj):
         return obj.user.email
 
+class EventsAdmin(admin.ModelAdmin):
+    fields = ['name', 'date', 'cost']
+    list_display = ['name', 'date', 'cost']
 
 admin.site.register(UserInfo, UserAdmin)
+admin.site.register(Events, EventsAdmin)

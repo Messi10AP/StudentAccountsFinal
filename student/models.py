@@ -15,4 +15,10 @@ class UserInfo(models.Model):
     def __unicode__(self):
         return str(self.user.username)
 
+class Events(models.Model):
+    name = models.CharField(max_length = 80)
+    date = models.DateTimeField()
+    cost = models.DecimalField(max_digits = 6, decimal_places = 2)
+    def __unicode__(self):
+	return str(self.name)
 # Create your models here.

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.conf.urls import url
-from .models import UserInfo
+from .models import UserInfo, Events
 from django import forms
 from .forms import RegisterForm, LoginForm
 from django.contrib.auth.models import User
