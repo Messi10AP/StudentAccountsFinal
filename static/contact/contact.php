@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 if(isset($_POST['email'])) {
 
     $email_to = "joash.pereira@gmail.com";
@@ -74,10 +74,14 @@ if(isset($_POST['email'])) {
 	 
 	@mail($email_to, $email_subject, $email_message, $headers);  
 
+$url = 'http://adhias.com/thankyou/'
+while (ob_get_status()) 
+{
+    ob_end_clean();
+}
+header( "Location: $url" );
 
 ?>
- 
- 
  
 <!-- include your own success html here -->
  
