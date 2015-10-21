@@ -12,6 +12,6 @@ urlpatterns = [
     url(r'^/info/$', views.studentinfo, name='studentinfo'),
     url(r'^/error/$', views.error, name='error'),
     url(r'^/logout/$', views.site_logout, name='logout'),
-
+    url(r'^/order/$', views.order, name='order'),
 ]
 #]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

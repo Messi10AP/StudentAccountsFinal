@@ -53,3 +53,10 @@ class LoginForm(forms.Form):
             raise forms.ValidationError({'username':['Invalid username/password']})
 
         return cleaned_data
+
+class OrderForm(forms.Form):
+    data = [0, 0, 0]
+    choices = ['checked', 'unchecked']
+    def clean(self):
+        cleaned_data = super(OrderForm, self).clean()
+  	

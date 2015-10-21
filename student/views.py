@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.conf.urls import url
 from .models import UserInfo, Events
 from django import forms
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, OrderForm
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_exempt
@@ -112,3 +112,8 @@ def site_logout(request):
     logout(request)
     return redirect("/")
     #return render(request, 'student/studentinfo.html', {} )
+
+def order(request):
+	if request.method == 'POST':
+		form = 0
+	return render(request, 'student/orderform.html')
